@@ -94,3 +94,5 @@ Check your email and confirm the subscription
 ```sh
 aws cloudwatch put-metric-alarm --cli-input-json file://aws/json/alarm-config.json
 ```
+
+TODO: add architecture diagram

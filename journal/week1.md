@@ -42,7 +42,7 @@ npm i
 
 ## Containerize backend and frontend
 
-I created a Dockerfile for the flask app; `backend-flask/Dockerfile` ([code](https://github.com/beiciliang/aws-bootcamp-cruddur-2023/blob/week-1/backend-flask/Dockerfile)). At the root, I run the commands below to build a docker image and run it.
+I created a Dockerfile for the flask app; `backend-flask/Dockerfile` ([code](https://github.com/johnkdunyo/aws-bootcamp-cruddur-2023/blob/week-1/backend-flask/Dockerfile)). At the root, I run the commands below to build a docker image and run it.
 
 ```sh
 docker build -t  backend-flask ./backend-flask
@@ -53,4 +53,11 @@ We can send curl to test the server, which returns json as the response in the p
 
 ```sh
 curl -X GET http://localhost:4567/api/activities/home -H "Accept: application/json" -H "Content-Type: application/json"
+```
+
+I created a Dockerfile as `frontend-react-js/Dockerfile` ([code](https://github.com/johnkdunyo/aws-bootcamp-cruddur-2023/blob/week-1/frontend-react-js/Dockerfile)). At the root, I run the following commands to build and run the container
+
+```sh
+docker build -t frontend-react-js ./frontend-react-js
+docker run --rm -p 3000:3000 -d frontend-react-js
 ```

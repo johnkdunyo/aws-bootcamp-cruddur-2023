@@ -74,7 +74,7 @@ I modified the following files as shown in the commits attached to them:
 
 ### 2. Flask App Notifications
 
-For the frontend, as seen in [this commit](https://github.com/beiciliang/aws-bootcamp-cruddur-2023/commit/8d7912cfef3a507e19bad39b518d3db406f511c6), modify the following files:
+For the frontend, as seen in [this commit](https://github.com/johnkdunyo/aws-bootcamp-cruddur-2023/commit/f5a4eda7e56b02b99998c1bcdd11280d7c977ace), modify the following files:
 
 - `frontend-react-js/src/App.js`: add path and element for notifications in the router
 - `frontend-react-js/src/pages/NotificationsFeedPage.js`: create js file for the notification page (take `HomeFeedPage.js` as reference)

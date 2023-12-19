@@ -17,7 +17,7 @@ from services.notifications_activities import *
 app = Flask(__name__)
 frontend = os.getenv('FRONTEND_URL')
 backend = os.getenv('BACKEND_URL')
-origins = [frontend, backend]
+origins = [frontend, backend, "http://localhost:3000", "http://localhost:4567"]
 cors = CORS(
   app, 
   resources={r"/api/*": {"origins": origins}},

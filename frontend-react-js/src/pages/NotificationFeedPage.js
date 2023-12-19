@@ -27,6 +27,7 @@ export default function NotificationsFeedPage() {
       });
 
       let resJson = await res.json();
+      console.info(resJson, "resJson");
 
       if (res.status === 200) {
         setActivities(resJson);
@@ -57,6 +58,8 @@ export default function NotificationsFeedPage() {
     loadData();
     checkAuth();
   }, []);
+
+  console.info("activities,", activities);
 
   return (
     <article>

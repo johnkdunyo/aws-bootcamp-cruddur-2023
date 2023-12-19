@@ -61,3 +61,21 @@ I created a Dockerfile as `frontend-react-js/Dockerfile` ([code](https://github.
 docker build -t frontend-react-js ./frontend-react-js
 docker run --rm -p 3000:3000 -d frontend-react-js
 ```
+
+## Add notification endpoint and React page
+
+### 1. Flask App Notifications
+
+I modified the following files as shown in the commits attached to them:
+
+- `backend-flask/openapi-3.0.yml`: add `/api/activities/notifications` in `paths` (take ` /api/activities/home` as reference) [commit](https://github.com/johnkdunyo/aws-bootcamp-cruddur-2023/commit/5e378e527ca5e18e04e6f91b395c0389323c0481)
+- `backend-flask/app.py`: add the route for `/api/activities/notifications` and define the function for `data_notifications`, which uses the class `NotificationsActivities` imported from `services.notifications_activities` [commit](https://github.com/johnkdunyo/aws-bootcamp-cruddur-2023/commit/a56563fdf82efb77c132c9b393140a6fc9daf629)
+- `backend-flask/services/notifications_activities.py`: define the class `NotificationsActivities` (take `home_activities.py` as reference) [commit](https://github.com/johnkdunyo/aws-bootcamp-cruddur-2023/commit/fddccd62a5e6385cdf88add72fe6b0f5b351be7e)
+
+### 2. Flask App Notifications
+
+For the frontend, as seen in [this commit](https://github.com/beiciliang/aws-bootcamp-cruddur-2023/commit/8d7912cfef3a507e19bad39b518d3db406f511c6), modify the following files:
+
+- `frontend-react-js/src/App.js`: add path and element for notifications in the router
+- `frontend-react-js/src/pages/NotificationsFeedPage.js`: create js file for the notification page (take `HomeFeedPage.js` as reference)
+- `frontend-react-js/src/pages/NotificationsFeedPage.css`: create an empty css file

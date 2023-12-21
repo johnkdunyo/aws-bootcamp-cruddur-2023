@@ -79,3 +79,17 @@ For the frontend, as seen in [this commit](https://github.com/johnkdunyo/aws-boo
 - `frontend-react-js/src/App.js`: add path and element for notifications in the router
 - `frontend-react-js/src/pages/NotificationsFeedPage.js`: create js file for the notification page (take `HomeFeedPage.js` as reference)
 - `frontend-react-js/src/pages/NotificationsFeedPage.css`: create an empty css file
+
+## Compose multiple containers with DynamoDB Local and Postgres
+
+Create `docker-compose.yml` at the root of the project ([code](https://github.com/johnkdunyo/aws-bootcamp-cruddur-2023/blob/week-1/docker-compose.yml)). We are going to use Postgres and DynamoDB local in future labs. We can bring them in as containers and reference them externally.
+
+Now run `docker compose up` and open the link of `3000` in the browser, sign up and sign in as a new user (verified with the code of `1234` saved in the cookies). Now in the "Notifications", the application is shown as the screenshot below.
+
+![Proof of notifications feature](assets/week1-screenshot-of-running-app.png)
+
+## References
+
+- Good Article for Debugging Connection Refused ([link](https://pythonspeed.com/articles/docker-connection-refused/))
+- CORS in a Flask API([link](https://medium.com/@mterrano1/cors-in-a-flask-api-38051388f8cc))
+- Example of using DynamoDB local ([link](https://github.com/100DaysOfCloud/challenge-dynamodb-local))

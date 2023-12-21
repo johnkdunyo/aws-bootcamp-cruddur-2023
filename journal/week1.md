@@ -4,7 +4,6 @@
 - [Containerize backend and frontend](#containerize-backend-and-frontend)
 - [Add notification endpoint and React page](#add-notification-endpoint-and-react-page)
 - [Compose multiple containers with DynamoDB Local and Postgres](#compose-multiple-containers-with-dynamodb-local-and-postgres)
-- [Homework challenges](#homework-challenges)
 - [References](#references)
 
 ## Get the apps running locally
